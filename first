@@ -1,0 +1,9 @@
+import datetime
+today = str(datetime.date.today())
+start = "2020-05-11"
+forges = ["Volundr", "Gofannon", "Izanami", "Bergusia"]
+today1 = datetime.datetime.strptime(today, "%Y-%m-%d").date()
+start1 = datetime.datetime.strptime(start, "%Y-%m-%d").date()
+delta = (today1 - start1).days
+i = delta % 4
+print("Today's forge is", forges[i])
